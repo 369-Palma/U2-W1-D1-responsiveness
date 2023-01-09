@@ -338,6 +338,7 @@
       table {
         margin-bottom: 2em;
         margin-left: 25%;
+        text-align: center;
       }
       
       caption {
@@ -434,6 +435,12 @@
     margin-left: 20em;
     display: inline-block;
  }
+
+ header nav li a {
+    color: white;
+    text-decoration: none;
+    padding-right: 2em;
+  }
  #contenitoreheader{
     display: flex;
     justify-content: flex-start;
@@ -472,6 +479,7 @@
     }
     
     table {
+        text-align: center;
         margin-bottom: 2em;
         padding-left:50%;
         margin-left: 25%;
@@ -506,8 +514,80 @@
       #bloccovideo{
         display:flex;
       }
+
+      footer {
+        background: rgb(53, 53, 53);
+        background: linear-gradient(
+          0deg,
+          rgba(53, 53, 53, 1) 0%,
+          rgba(5, 85, 103, 1) 68%
+        );
+        box-shadow: 0 3px 3px #444;
+        color: #f0f0f0;
+        padding: 1em;
+        text-align: center;
+        font-size: 1.2rem;
+      }
+      footer a {
+        color: fuchsia;
+      }
 }
 
+
+@media print {
+    html{
+        background-color: none;
+    }
+    header{
+        display:none;
+    }
+
+   table {
+    margin-bottom: 2em;
+    margin-top:3em;
+  }
+  caption {
+    font-weight: bold;
+    font-style: italic;
+  }
+  thead tr {
+    background-color: white;
+    color: black
+  }
+  th,
+  td {
+    padding: 12px 15px;
+    vertical-align: bottom;
+    text-align: center;
+  }
+  tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+
+  tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+
+  tbody tr:last-of-type {
+    border-bottom: 2px;
+  }
+}
+
+#bloccovideo{
+    display:none;
+}
+
+section{
+    display:none;
+}
+
+aside{
+    display:none;
+}
+
+/* footer{
+    display:none;
+} */
 /*stili di partenza 
 body {
     font-family: Poppins, "Helvetica Neue", sans-serif;
